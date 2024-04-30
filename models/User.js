@@ -1,12 +1,8 @@
 import mongoose, { Schema } from "mongoose";
 
 const userSchema = new Schema({
-  firstName: String,
-  lastName: String,
-  dob: Number,
-  age: Number,
-  email: String,
-  password: String,
+  email: {type: String, required: [true, "Please provide email"], unique: true},
+  password: {type: String, required: [true, "Please provide password"], unique: true},
   userType: {
     type: String,
     enum: ["user", "admin"],
