@@ -5,7 +5,7 @@ const movieSchema = new Schema({
   genre: String,
   rating: Number,
   reviews: [{ type: Schema.Types.ObjectId, ref: "Review" }],
-  dor: Number,
+  dor: String,
   director: { type: Schema.Types.ObjectId, ref: "Director" },
   cast: [{ type: Schema.Types.ObjectId, ref: "Actor" }],
   length: Number,

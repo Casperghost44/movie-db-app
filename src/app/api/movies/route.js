@@ -59,6 +59,7 @@ export async function POST(request) {
     director,
     cast,
     length,
+    imagePath,
   });
   return NextResponse.json(
     { message: "Movie has been created!" },
